@@ -1,0 +1,123 @@
+:root{
+    --primary-blue: #007bff;
+    --background-color: #f8f9fa;
+    --text-color: #202124;
+    --border-color: #dadce0;
+
+    /*Highlight Colors */
+    --red-bg: #fce8e6;
+    --red-text: #c5221f;
+    --green-bg: #e6f4ea;
+    --green-text: #137333;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    margin: 0;
+}
+
+h1{
+    margin-bottom: 10px;
+}
+
+.description{
+    text-align: center;
+    max-width: 600px;
+    color: #5f6368;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.container{
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    width: 100%;
+    max-width: 1000px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.panels-wrapper{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.panel{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+textarea, .result-box{
+    width: 100%;
+    height: 300px;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 16px;
+    line-height: 1.5;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+textarea:focus{
+    outline: none;
+    border-color: var(--primary-blue);
+}
+
+/*Hidden by default*/
+.result-box{
+    display: none;
+    background-color: #fafafa;
+    overflow-y: auto;
+    white-space: pre-wrap;
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+button {
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-compare{
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+.btn-clear {
+    background-color: white;
+    color: var(--primary-blue);
+    border: 1px solid var(--border-color);
+}
+
+/* How the differences will look */
+.deleted{
+    background-color: var(--red-bg);
+    color: var(--red-text);
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.added{
+    background-color: var(--green-bg);
+    color: var(--green-text);
+    padding: 2px 4px;
+    border-radius: 3px;
+}

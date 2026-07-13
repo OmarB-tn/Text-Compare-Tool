@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Compare Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Text Compare Tool</h1>
+    <p class="description">
+        Quicklly find every addition and deletion between two versions of your text. Juste paste them into our tool, and we'll show you exactly chat's been changed.
+    </p>
+    <div class="container">
+        <div class="panels-wrapper">
+            <!-- Left Side: Original Text -->
+            <div class="panel">
+                <textarea id="text1" placeholder="Paste your original text here..."></textarea>
+                <div id="result1" class="result-box"></div> 
+            </div>
+
+            <!--Right Side: Changed Text-->
+            <div class="panel">
+                <textarea id="text2" placeholder="Paste your changed text here..."></textarea>
+                <div id="result2" class="result-box"></div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="controls">
+            <button class="btn-compare" onclick="compareText()">Compare</button>
+            <button class="btn-clear" onclick="clearText()">Clear</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
